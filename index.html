@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    
+    
+    <div class="profile-card">
+        
+        
+        <div class="card-header">
+           
+            <div class="profile-pic">
+                <img class="logo" src="logo.png" alt="logo">
+            </div>
+        </div>
+        
+        
+        <div class="card-body">
+            
+            <h1 class="name">Yashraj Swamy</h1>
+            <p id="us" class="username">@yashrajswamy </p>
+            
+            
+            <p class="bio">
+                💻 Full Stack Developer | ☕ Coffee Lover | 🎮 Gamer
+            </p>
+            
+            
+            <div class="stats" id="stat">
+                <div class="stat-item">
+                    <div class="stat-number" id="statNF">1.2K</div>
+                    <div class="stat-label">Followers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="statNL">543</div>
+                    <div class="stat-label">Following</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="statNP">89</div>
+                    <div class="stat-label">Posts</div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="skills">
+                <span class="skill-tag" id="html">HTML</span>
+                <span class="skill-tag" id="css">CSS</span>
+                <span class="skill-tag" id="javascript">JavaScript</span>
+                <span class="skill-tag" id="react">React</span>
+                <span class="skill-tag" id="python">Python</span>
+            </div>
+            
+            
+            <div class="buttons">
+                <button class="btn btn-primary" id="followBtn">Follow</button>
+                <button class="btn btn-secondary" id="messageBtn"><a target="_blank" href="https://www.linkedin.com/in/yashraj-swamy">Message</a></button>
+            </div>
+        </div>
+    </div>
+    
+   
+    <script>
+        
+        const followBtn = document.getElementById('followBtn');
+        const messageBtn = document.getElementById('messageBtn');
+        const username = document.getElementById('us');
+        
+        followBtn.addEventListener('click', function() {
+            if (followBtn.textContent === 'Follow') {
+                followBtn.textContent = 'Following';
+                followBtn.style.background = 'linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%)';
+            } else {
+                followBtn.textContent = 'Follow';
+                followBtn.style.background = 'black';
+            }
+        });
+        
+        messageBtn.addEventListener('click', function() {
+            if (messageBtn.textContent === 'Message') {
+                messageBtn.textContent = 'Sent';
+                messageBtn.style.background = "linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%)";
+                messageBtn.style.color = 'white';
+                messageBtn.style.border = 'none';
+            } else {
+                messageBtn.textContent = 'Message';
+                messageBtn.style.background = 'white';
+                messageBtn.style.color = '#667eea';
+                messageBtn.style.border = '2px solid #667eea';
+            }
+        });
+        
+        html.addEventListener('mouseover', function() {
+            if(html.style.background!="black")
+            {
+                html.style.background = "black";
+                html.style.color = "white";
+                html.textContent = "Python";
+            }
+            else
+            {
+                html.style.background = "#e5e7eb";
+                html.style.color = "#374151";
+                html.textContent = "HTML";
+            }
+        });
+        css.addEventListener('mouseover', function() {
+            if(css.style.background!="black")
+            {
+                css.style.background = "black";
+                css.style.color = "white";
+                css.textContent = "React";
+            }
+            else
+            {
+                css.style.background = "#e5e7eb";
+                css.style.color = "#374151";
+                css.textContent = "CSS";
+            }    
+        });
+        javascript.addEventListener('mouseover', function() {
+            if(javascript.style.background!="black")
+            {
+                javascript.style.background = "black";
+                javascript.style.color = "white";
+            }
+            else
+            {
+                javascript.style.background = "#e5e7eb";
+                javascript.style.color = "#374151";
+            }
+        });
+        react.addEventListener('mouseover', function() {
+            if(react.style.background!="black")
+            {
+                react.style.background = "black";
+                react.style.color = "white";
+                react.textContent = "CSS";
+            }
+            else
+            {
+                react.style.background = "#e5e7eb";
+                react.style.color = "#374151";
+                react.textContent = "React";
+            }
+        });
+        python.addEventListener('mouseover', function() {
+            if(python.style.background!="black")
+            {
+                python.style.background = "black";
+                python.style.color = "white";
+                python.textContent = "HTML";
+            }
+            else
+            {
+                python.style.background = "#e5e7eb";
+                python.style.color = "#374151";
+                python.textContent = "Python";
+            }
+        });
+        statNF.addEventListener("mouseover",function(){
+            statNF.textContent = "1,200";
+        });
+        statNL.addEventListener("mouseover",function(){
+            statNL.textContent = "5 4 3";
+        });
+        statNP.addEventListener("mouseover",function(){
+            statNP.textContent = "0.089K";
+        });
+        statNF.addEventListener("mouseout",function(){
+            statNF.textContent = "1.2K";
+        });
+        statNL.addEventListener("mouseout",function(){
+            statNL.textContent = "543";
+        });
+        statNP.addEventListener("mouseout",function(){
+            statNP.textContent = "89";
+        });
+    </script>
+    
+</body>
+</html>
